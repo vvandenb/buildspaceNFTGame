@@ -16,19 +16,18 @@ const main = async () => {
 	console.log("Contract deployed to:", gameContract.address, "\n\n");
 
 	await gameContract.mintCharacterNFT(2);
-	await gameContract.mintCharacterNFT(1);
 	await gameContract.attackBoss();
 	await gameContract.attackBoss();
-  };
+};
   
-  const runMain = async () => {
+const runMain = async () => {
 	try {
-	  await main();
-	  process.exit(0);
+		await main();
+		process.exit(0);
 	} catch (error) {
-	  console.log(error);
-	  process.exit(1);
+		console.log(error);
+		process.exit(1);
 	}
-  };
-  
-  runMain();
+};
+
+runMain();
