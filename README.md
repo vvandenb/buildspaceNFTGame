@@ -1,15 +1,6 @@
-# Basic Sample Hardhat Project
+# <img src="https://vvandenb.herokuapp.com/static/images/spyro.png" width="40" height="40" /> Buildspace NFT Game <img src="https://vvandenb.herokuapp.com/static/images/spyro.png" width="40" height="40" />
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This is a small game on the blockchain that uses NFT as characters.\
+You can mint your character and team up with other players to beat the boss here: https://vvandenbspyros.herokuapp.com/
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+<img src="https://media1.giphy.com/media/YaooEfKWBBD68/200.gif" width="200" />
