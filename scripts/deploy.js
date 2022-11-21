@@ -1,21 +1,26 @@
+function customFormatUnits(toConvert, unit, precision) {
+	return parseFloat(ethers.utils.formatUnits(toConvert, unit))
+}
+
 const main = async () => {
 	const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
 	const gameContract = await gameContractFactory.deploy(
 		["Spyro", "Hunter", "Elora"],
 		["https://static.wikia.nocookie.net/spyro/images/4/47/Spyro_PS1_original.jpg/revision/latest/scale-to-width-down/425?cb=20190330094953",
-		"https://static.wikia.nocookie.net/spyro/images/a/a7/Hunter_PS1.jpg/revision/latest/scale-to-width-down/403?cb=20180824200042", 
-		"https://static.wikia.nocookie.net/spyro/images/a/a6/Elora_PS1.jpg/revision/latest/scale-to-width-down/409?cb=20180824195930"],
+			"https://static.wikia.nocookie.net/spyro/images/a/a7/Hunter_PS1.jpg/revision/latest/scale-to-width-down/403?cb=20180824200042",
+			"https://static.wikia.nocookie.net/spyro/images/a/a6/Elora_PS1.jpg/revision/latest/scale-to-width-down/409?cb=20180824195930"],
 		[25, 10, 50],
 		[25, 50, 10],
 		"Ripto",
 		"https://static.wikia.nocookie.net/spyro/images/3/34/Ripto_Ripto%27s_Rage.png/revision/latest/scale-to-width-down/615?cb=20180709173303",
 		500,
-		4
+		4,
 	);
+
 	await gameContract.deployed();
 	console.log("Contract deployed to:", gameContract.address, "\n\n");
 };
-  
+
 const runMain = async () => {
 	try {
 		await main();
